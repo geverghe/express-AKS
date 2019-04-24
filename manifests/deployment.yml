@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: atbaggaexpressAKS 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: atbaggaexpressAKS 
+    spec:
+      containers:
+        - name: atbaggaexpressAKS 
+          image: atbagga.azurecr.io/atbaggaexpressAKS 
+          ports:
+          - containerPort: 8080
